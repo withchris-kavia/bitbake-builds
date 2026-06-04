@@ -1,0 +1,10 @@
+#!/bin/zsh
+if command -v /opt/homebrew/bin/python3.13 >/dev/null 2>&1; then
+  exec /opt/homebrew/bin/python3.13 "$@"
+elif command -v /opt/homebrew/bin/python3.12 >/dev/null 2>&1; then
+  exec /opt/homebrew/bin/python3.12 "$@"
+elif command -v /opt/homebrew/bin/python3.11 >/dev/null 2>&1; then
+  exec /opt/homebrew/bin/python3.11 "$@"
+else
+  exec /usr/bin/python3 "$@"
+fi
